@@ -16,6 +16,7 @@ public class Aplicacao {
 				.get(URI.create("http://localhost:8080/livros"))
 				.header("Authorization", "Basic YWxnYXdvcmtzOnMzbmg0").build();
 		
+		
 		ResponseEntity<Livro[]> response = restTemplate.exchange(request, Livro[].class);
 		
 		for(Livro livro : response.getBody()){
